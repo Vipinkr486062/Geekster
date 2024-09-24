@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e4e4e7;
+}html{
+    font-family: ui-sans-serif;
+  line-height: 1.5;
+}
