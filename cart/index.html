@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .main{
+            <!-- border: 2px solid red; -->
+            height: 90vh;
+            width: 100%;
+            display: flex;justify-content: center;
+            align-items: center;
+            
+        }
+        .container{
+            <!-- border: 2px solid red;  -->
+            width: 60%;
+            display: flex;;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #a{
+            margin-top: 1.3rem;
+           
+            font-size: 21px;
+        }
+        #c{
+            color: rgb(249, 78, 107);
+            margin-top: 1.3rem;
+            font-size: 21px;
+        }
+        #b{
+            width: 10rem;
+            padding: 1rem;
+            background-color: rgb(248, 58, 90);
+            border: none;
+            border-radius: 10px;
+            margin-top: 1.3rem;
+            font-size: 19px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <img src="https://www.giva.co/cdn/shop/t/95/assets/empty-cart.jpg?v=2867468997513044031699807510" alt="">
+           <span id="a">Your cart is empty</span><br><br>
+            <span id="c">Let's fill it up with some amazing jewellery!</span><br><br>
+            <button id="b">Explore Now</button>
+        </div>
+    </div>
+</body>
+</html>

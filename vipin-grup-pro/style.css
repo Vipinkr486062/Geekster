@@ -74,10 +74,16 @@ h2{
   display: flex;
   justify-content: center;
 }
+.h2{
+  width: fit-content;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
 .store-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly2;
+  justify-content: space-evenly;
   width: 80%;
   margin: 0 auto;
   gap: 2%;
@@ -87,6 +93,8 @@ h2{
   
 }
 .store-address{
+
+
   margin-bottom: 20px;
   background: #fafafa;
   border-radius: 1rem;
