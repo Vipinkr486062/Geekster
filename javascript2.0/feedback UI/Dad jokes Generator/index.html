@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Jokes Generator</title>
+    <style>
+       
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: pink;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #jokeDisplay {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .loading {
+            font-size: 1.5em;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dad Jokes Generator</h1>
+    <button id="jokeButton">Tell Me A Joke</button>
+    <p id="jokeDisplay"></p>
+
+    <script>
+
+        document.getElementById('jokeButton').addEventListener('click', async function() {
+            const jokeDisplay = document.getElementById('jokeDisplay');
+            jokeDisplay.classList.add('loading');
+            jokeDisplay.innerText = 'Loading...';
+
+            try {
+                const response = await fetch('https://api.api-ninjas.com/v1/jokes?limit=1', {
+                    method: 'GET',
+                    headers: {
+                        'X-Api-Key': 'WhLXU3qVVY8TxXc0kwCCbg==iKh2K0NXnzLnfFPE' ;
+                    }
+                });
+                const data = await response.json();
+                jokeDisplay.classList.remove('loading');
+                jokeDisplay.innerText = data[0].joke;
+            } catch (error) {
+                jokeDisplay.classList.remove('loading');
+                jokeDisplay.innerText = 'Oops! Something went wrong. Please try again.';
+            }
+
+        });
+
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
